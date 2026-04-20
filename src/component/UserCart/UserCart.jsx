@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const UserCart = ({user}) => {
@@ -9,7 +10,9 @@ const UserCart = ({user}) => {
          {user.title}
         </p>
         <div className="card-actions justify-end">
-          <button className="btn">Show details</button>
+          <Link href={`/userData/${user.id}`}>
+            <button className="btn">Show details</button>
+          </Link>
         </div>
       </div>
     </div>
